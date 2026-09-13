@@ -1,0 +1,27 @@
+{
+    "name": "serein-discord",
+    "description": "Feature rich discord music bot built with discord.js",
+    "version": "0.0.1",
+    "module": "index.ts",
+    "type": "commonjs",
+    "imports": {
+        "#/*": "./src/*"
+    },
+    "scripts": {
+        "dev": "bun index.ts --watch",
+        "start": "node dist/index.js",
+        "start:bun" : "bun index.ts",
+        "build": "bun build index.ts --outfile dist/index.js --target node"
+    },
+    "dependencies": {
+        "discord.js": "^14.27.0",
+        "dotenv": "^17.4.2",
+        "mongoose": "^9.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^7"
+    }
+}
