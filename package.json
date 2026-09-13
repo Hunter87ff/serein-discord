@@ -15,6 +15,7 @@
     "dependencies": {
         "discord.js": "^14.27.0",
         "dotenv": "^17.4.2",
+        "lavalink-client": "^2.11.0",
         "mongoose": "^9.10.0"
     },
     "devDependencies": {
@@ -22,5 +23,15 @@
     },
     "peerDependencies": {
         "typescript": "^7"
+    },
+    "engines": {
+        "bun": ">=1.1.27",
+        "node": ">=22.0.0"
+    },
+    "packageManager": "bun@1.4.2",
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "esbuild"
+        ]
     }
 }

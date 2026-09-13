@@ -1,9 +1,18 @@
-import type Serein  from "#/core/bot";
-import type { Message } from "discord.js";
+import Serein from "#/core/bot";
+import {
+    AutocompleteInteraction,
+    ChatInputCommandInteraction,
+    Client,
+    SlashCommandBuilder,
+    SlashCommandSubcommandBuilder,
+    SlashCommandSubcommandGroupBuilder,
+} from "discord.js";
 
-export interface ContextCommand {
-    name: string;
-    description: string;
-    aliases?: string[];
-    execute: (client: Serein, message: Message, args: string[]) => Promise<void> | void;
+declare type InteractionExecuteFN = (client: Serein, interaction: ChatInputCommandInteraction<"cached">) => any;
+declare type AutoCompleteExecuteFN = (client: Serein, interaction: AutocompleteInteraction) => any;
+
+export interface Command {
+    data: SlashCommandBuilder;
+    execute: InteractionExecuteFN;
+    autocomplete?: AutoCompleteExecuteFN;
 }
