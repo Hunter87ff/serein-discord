@@ -3,14 +3,13 @@
     "description": "Feature rich discord music bot built with discord.js",
     "version": "0.0.1",
     "module": "index.ts",
-    "type": "commonjs",
+    "type": "module",
     "imports": {
         "#/*": "./src/*"
     },
     "scripts": {
-        "dev": "bun index.ts --watch",
+        "dev": "bun index.ts",
         "start": "node dist/index.js",
-        "start:bun" : "bun index.ts",
         "build": "bun build index.ts --outfile dist/index.js --target node"
     },
     "dependencies": {
